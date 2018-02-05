@@ -131,7 +131,7 @@ public class Edit extends AppCompatActivity {
 
                 else {
                     //if the input is legal, begin the intent
-                    //and send information to MainActivity
+                    //and update information in listview
                     float charge_edit = Float.parseFloat(textViewCharge.getText().toString());
                     String comment_edit = textViewComment.getText().toString();
                     subList.get(index_i).setName(name_edit);
