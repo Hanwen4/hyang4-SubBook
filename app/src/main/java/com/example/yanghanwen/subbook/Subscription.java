@@ -10,6 +10,7 @@ package com.example.yanghanwen.subbook;
 /**
  * Information of a subscription including
  * name, date, monthly charge and comment
+ * along with setters and getters
  */
 public class Subscription {
     public String name;
