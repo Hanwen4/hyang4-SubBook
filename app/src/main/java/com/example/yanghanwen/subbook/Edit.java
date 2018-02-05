@@ -104,7 +104,7 @@ public class Edit extends AppCompatActivity {
                 String string_charge = textViewCharge.getText().toString();
 
                 //check if the input is legal
-                if (!(date_edit.matches("([0-9]{2})-([0-9]{2})-([0-9]{4})"))) {
+                if (!(date_edit.matches("([0-9]{4})-([0-9]{2})-([0-9]{2})"))) {
                     Toast.makeText(Edit.this, "Invalid date format", Toast.LENGTH_SHORT).show();
                 }
 
@@ -115,6 +115,19 @@ public class Edit extends AppCompatActivity {
                 else if (string_charge.equals(".")) {
                     Toast.makeText(Edit.this, "Only numerical allowed in charge field", Toast.LENGTH_SHORT).show();
                 }
+
+                else if(name_edit.isEmpty()) {
+                    Toast.makeText(Edit.this, "Name cannot be empty", Toast.LENGTH_SHORT).show();
+                }
+
+                else if(date_edit.isEmpty()) {
+                    Toast.makeText(Edit.this, "Date cannot be empty", Toast.LENGTH_SHORT).show();
+                }
+
+                else if(string_charge.isEmpty()) {
+                    Toast.makeText(Edit.this, "Charge cannot be empty", Toast.LENGTH_SHORT).show();
+                }
+
 
                 else {
                     float charge_edit = Float.parseFloat(textViewCharge.getText().toString());

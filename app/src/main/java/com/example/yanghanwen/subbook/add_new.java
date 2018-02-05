@@ -55,7 +55,7 @@ public class add_new extends AppCompatActivity {
                 String charge_string = edit_charge.getText().toString();
 
                 //See if the input format legal
-                if (!(date.matches("([0-9]{2})-([0-9]{2})-([0-9]{4})"))) {
+                if (!(date.matches("([0-9]{4})-([0-9]{2})-([0-9]{2})"))) {
                     Toast.makeText(add_new.this, "Invalid date format", Toast.LENGTH_SHORT).show();
                 }
 
@@ -65,6 +65,18 @@ public class add_new extends AppCompatActivity {
 
                 else if(charge_string.equals(".")) {
                     Toast.makeText(add_new.this, "Only numerical allowed in charge field", Toast.LENGTH_SHORT).show();
+                }
+
+                else if(name.isEmpty()) {
+                    Toast.makeText(add_new.this, "Name cannot be empty", Toast.LENGTH_SHORT).show();
+                }
+
+                else if(date.isEmpty()) {
+                    Toast.makeText(add_new.this, "Date cannot be empty", Toast.LENGTH_SHORT).show();
+                }
+
+                else if(charge_string.isEmpty()) {
+                    Toast.makeText(add_new.this, "Charge cannot be empty", Toast.LENGTH_SHORT).show();
                 }
 
                 else {

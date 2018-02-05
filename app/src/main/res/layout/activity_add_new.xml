@@ -19,7 +19,7 @@
         android:id="@+id/date"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="dd-mm-yyyy"
+        android:hint="yyyy-mm-dd"
         />
 
     <EditText
