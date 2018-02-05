@@ -72,6 +72,11 @@ public class Subscription {
         this.comment = comment;
     }
 
+    /**
+     * return all information in a certain form
+     * with every entry in a single line
+     * @return
+     */
     @Override
     public String toString() {
         String all = name + '\n' + date + '\n' + charge + '\n'+ comment;
